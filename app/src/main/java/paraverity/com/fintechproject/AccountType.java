@@ -2,6 +2,7 @@ package paraverity.com.fintechproject;
 
 /**
  * Created by David on 08-Jul-17.
+ * Contains Account Info
  */
 
 public class AccountType {

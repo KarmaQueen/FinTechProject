@@ -2,6 +2,7 @@ package paraverity.com.fintechproject;
 
 /**
  * Created by David on 08-Jul-17.
+ * JavaBean that contains loan info
  */
 
 public class LoanInfoBean {
