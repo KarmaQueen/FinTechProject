@@ -22,9 +22,10 @@ public class FindBankActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_find_bank);
 
+		banksList = new ArrayList<>();
 		banksList.add(new BankBean("HSBC", R.drawable.ic_hsbc));
 		banksList.add(new BankBean("Societe Generale", R.drawable.ic_soge));
-		banksList.add(new BankBean("Bank of China HK", R.drawable.ic_soge));
+		banksList.add(new BankBean("Bank of China HK", R.drawable.ic_bochk));
 		banksList.add(new BankBean("Citi Bank", R.drawable.ic_citi));
 
 		ListView lv = (ListView)findViewById(R.id.list_bank);
@@ -41,6 +42,7 @@ public class FindBankActivity extends AppCompatActivity {
 				finish();
 			}
 		});
+
 	}
 
 }

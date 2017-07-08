@@ -47,7 +47,12 @@ public class DashboardActivity extends AppCompatActivity
 		if (requestCode == request_Code){
 			if(resultCode == RESULT_OK){
 				Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
+
 			}
+		}
+		if(requestCode == FindBankActivity.RESULT_SELECTED){
+			String bank = data.getStringExtra("bank_name");
+			Toast.makeText(DashboardActivity.this, bank, Toast.LENGTH_SHORT).show();
 		}
 	}
 	@Override
