@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/item_bank_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:gravity="center_vertical"
+        android:text="Societe Generale"/>
+
+    <ImageView
+        android:id="@+id/item_bank_icon"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_soge"
+        android:padding="4dp"
+        android:foregroundGravity="right"
+        android:layout_gravity="end"
+        android:layout_weight="0.17"/>
+
+</LinearLayout>
