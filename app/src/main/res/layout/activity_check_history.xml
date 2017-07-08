@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="paraverity.com.fintechproject.CheckHistoryActivity">
+    <EditText
+        android:id="@+id/date1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        android:background="#d4d4d4"
+        android:hint="Select Date..."
+        android:textSize="15sp"
+        android:textColor="#897"/>
+    <EditText
+        android:id="@+id/date2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#d4d4d4"
+        android:hint="Select Date..."
+        android:textSize="15sp"
+        android:textColor="#897"
+        android:layout_alignBaseline="@+id/date1"
+        android:layout_alignBottom="@+id/date1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/date1"
+        android:layout_centerHorizontal="true"
+        android:text="To"
+        android:textColor="#000000"/>
+
+</RelativeLayout>

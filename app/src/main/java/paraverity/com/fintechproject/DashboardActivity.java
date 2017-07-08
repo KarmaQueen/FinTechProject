@@ -1,5 +1,6 @@
 package paraverity.com.fintechproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,10 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+public class DashboardActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
-
+	int request_Code = 1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// int testing = 1234;
@@ -23,15 +25,6 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-
-		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-		fab.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-						.setAction("Action", null).show();
-			}
-		});
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -43,7 +36,20 @@ public class MainActivity extends AppCompatActivity
 		NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
 	}
-
+	public void checkHistory (View view){
+		startActivity(new Intent(this, CheckHistoryActivity.class));
+	}
+//	public void moreInfo (View view){
+//		startActivityForResult(new Intent("com.example.cicijiang.myapp.ScrollingActivity"), request_Code);
+//	}
+	public void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		if (requestCode == request_Code){
+			if(resultCode == RESULT_OK){
+				Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
+			}
+		}
+	}
 	@Override
 	public void onBackPressed() {
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -70,6 +76,7 @@ public class MainActivity extends AppCompatActivity
 
 		//noinspection SimplifiableIfStatement
 		if (id == R.id.action_settings) {
+			startActivity(new Intent(this, FriendListActivity.class));
 			return true;
 		}
 
