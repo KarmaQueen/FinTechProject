@@ -70,6 +70,8 @@ public class CheckHistoryActivity extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
                 datePickerDialog.show();
+
+
             }
         });
     }

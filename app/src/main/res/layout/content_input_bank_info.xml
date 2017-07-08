@@ -8,27 +8,110 @@
     tools:context="paraverity.com.fintechproject.InputBankInfoActivity"
     tools:showIn="@layout/activity_input_bank_info">
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I have a bank in mind"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bank"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency"/>
+            <Spinner
+                android:id="@+id/inputbankinfo_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/currencies"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"/>
+            <EditText
+                android:id="@+id/inputbankinfo_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Months"/>
+            <EditText
+                android:id="@+id/inputbankinfo_months"
+                android:layout_width="52dp"
+                android:layout_height="33dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/inputbankinfo_confirm"
+            android:onClick="confirmInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="confirm"/>
+
+    </LinearLayout>
+
+
+    <!--
     <TextView
-        android:id="@+id/textView10"
+        android:id="
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp" />@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
         android:layout_marginTop="40dp"
-        android:text="month"
-        app:layout_constraintLeft_toRightOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        android:layout_marginStart="110dp" />
+        android:text="months"
+        app:layout_constraintTop_toBottomOf="@+id/inputbankinfo_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.911" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="64dp"
-        android:layout_height="37dp"
+        android:id="@+id/inputbankinfo_months"
+        android:layout_width="52dp"
+        android:layout_height="33dp"
         android:layout_marginLeft="260dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="31dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/inputbankinfo_amount"
         android:layout_marginStart="260dp" />
 
     <Button
@@ -38,35 +121,22 @@
         android:text="Add Bank"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/inputbankinfo_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_marginLeft="150dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputbankinfo_spinner"
         android:layout_marginStart="150dp"
-        tools:layout_editor_absoluteY="226dp" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="64dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        android:layout_marginLeft="150dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="150dp" />
+        android:layout_marginTop="41dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -75,8 +145,9 @@
         android:text="Amount of money"
         android:layout_marginLeft="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="30dp"
-        tools:layout_editor_absoluteY="235dp" />
+        android:layout_marginTop="202dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -95,7 +166,7 @@
         android:layout_height="wrap_content"
         android:text="Duration"
         android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/inputbankinfo_amount"
         android:layout_marginLeft="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="30dp" />
@@ -108,46 +179,36 @@
         android:text="I have a bank in mind"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/inputbankinfo_confirm"
+        android:onClick="confirmInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="40dp"
         android:text="confirm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="year"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        app:layout_constraintLeft_toRightOf="@+id/editText4"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="489dp"
+        app:layout_constraintHorizontal_bias="0.872" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/inputbankinfo_spinner"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:entries="@array/currencies"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginStart="150dp" />
+    -->
 </android.support.constraint.ConstraintLayout>

@@ -111,4 +111,9 @@ public class DashboardActivity extends AppCompatActivity
 		drawer.closeDrawer(GravityCompat.START);
 		return true;
 	}
+
+	public void startOpenBankAccount(View view){
+		Intent i = new Intent(this, InputBankInfoActivity.class);
+		startActivity(i);
+	}
 }
