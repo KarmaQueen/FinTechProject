@@ -1,11 +1,13 @@
 package paraverity.com.fintechproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class InputBankInfoActivity extends AppCompatActivity {
 
@@ -24,6 +26,20 @@ public class InputBankInfoActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void confirmInfo(View view){
+        EditText amount = (EditText)findViewById(R.id.inputbankinfo_amount);
+        EditText months = (EditText)findViewById(R.id.inputbankinfo_months);
+
+        String amt = amount.getText().toString();
+        String mths = months.getText().toString();
+
+        Intent i = new Intent(this, BankRecommendationActivity.class);
+        i.putExtra("amount", amt);
+        i.putExtra("months", mths);
+        startActivity(i);
+
     }
 
 }

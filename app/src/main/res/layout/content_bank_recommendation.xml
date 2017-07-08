@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="paraverity.com.fintechproject.bankRecommendation"
+    tools:context="paraverity.com.fintechproject.BankRecommendationActivity"
     tools:showIn="@layout/activity_bank_recommendation">
 
     <TextView

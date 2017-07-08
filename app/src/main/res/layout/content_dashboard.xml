@@ -312,6 +312,7 @@
 
                     <Button
                         android:id="@+id/OpenNewAccount"
+                        android:onClick="startOpenBankAccount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
