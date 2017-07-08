@@ -13,6 +13,7 @@ public class FindBankActivity extends AppCompatActivity {
 
 	public static final int RESULT_SELECTED = 1;
 	public static final int RESULT_CANCEL = 2;
+	public static final int REQUEST_SELECT = 149;
 
 	private ArrayList<BankBean> banksList;
 

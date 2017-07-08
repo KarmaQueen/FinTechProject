@@ -95,9 +95,10 @@ public class DashboardActivity extends AppCompatActivity
 
 		} else if (id == R.id.OCBC) {
 
-		} else if (id == R.id.AddBank) {
-
-		} else if (id == R.id.Logout) {
+		} else if (id == R.id.navdrawer_add_bank) {
+			Intent i = new Intent(this, FindBankActivity.class);
+			startActivityForResult(i, FindBankActivity.REQUEST_SELECT);
+		} else if (id == R.id.navdrawer_logout) {
 
 		}
 

@@ -16,11 +16,11 @@
     <item android:title="Tools">
         <menu>
             <item
-                android:id="@+id/AddBank"
+                android:id="@+id/navdrawer_add_bank"
                 android:icon="@android:drawable/ic_menu_add"
                 android:title="Add Bank Account"/>
             <item
-                android:id="@+id/Logout"
+                android:id="@+id/navdrawer_logout"
                 android:icon="@android:drawable/ic_menu_revert"
                 android:title="Logout"/>
         </menu>
