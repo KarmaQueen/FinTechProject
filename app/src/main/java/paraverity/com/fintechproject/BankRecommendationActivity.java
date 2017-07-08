@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -29,15 +30,6 @@ public class BankRecommendationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bank_recommendation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         addListenerOnChoice();
 
@@ -114,6 +106,21 @@ public class BankRecommendationActivity extends AppCompatActivity {
 		ListView lv2 = (ListView)findViewById(R.id.listView_most);
 		PossibleGuarantorListAdapter customAdapter2 = new PossibleGuarantorListAdapter(this, R.layout.item_nums_bank, summaryList);
 		lv2.setAdapter(customAdapter2);
+
+		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent i = new Intent(BankRecommendationActivity.this, FindFriendActivity.class);
+				startActivity(i);
+			}
+		});
+		lv2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent i = new Intent(BankRecommendationActivity.this, FindFriendActivity.class);
+				startActivity(i);
+			}
+		});
     }
 
     private void addListenerOnChoice() {
