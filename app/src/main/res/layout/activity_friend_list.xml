@@ -1,37 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="paraverity.com.fintechproject.FriendListActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="Friend Lists"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/FriendList" />
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+    <Button
+        android:id="@+id/Family"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content"
+        android:text="Family"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@+id/FriendList"
+        android:gravity="left"
+        android:layout_alignStart="@+id/FriendList" />
+    <Button
+        android:id="@+id/HKUSTISA"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HKUST International Student ASSOCIATION"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@+id/Family"
+        android:gravity="left"
+        android:layout_alignStart="@+id/Family" />
+    <Button
+        android:id="@+id/HighSchool"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="High School Form Six Classmate"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@+id/HKUSTISA"
+        android:gravity="left"
+        android:layout_alignStart="@+id/HKUSTISA" />
+    <Button
+        android:id="@+id/CMB"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CMB Intern Friends"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@+id/HighSchool"
+        android:gravity="left"
+        android:layout_alignStart="@+id/HKUSTISA" />
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+    <ImageButton
+        android:id="@+id/AddFriendList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_below="@+id/CMB"
+        android:layout_alignStart="@+id/FriendList" />
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <TextView
+        android:id="@+id/AddList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to add a new Friend List"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/AddFriendList"
+        android:layout_toEndOf="@+id/AddFriendList"
+        android:layout_alignBottom="@+id/AddFriendList" />
 
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_friend_list" />
-
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
