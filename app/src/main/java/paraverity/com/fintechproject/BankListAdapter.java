@@ -22,6 +22,7 @@ public class BankListAdapter extends ArrayAdapter<BankBean> {
 		super(context, resource, banksList);
 	}
 
+	@NonNull
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent){
 		View v = convertView;

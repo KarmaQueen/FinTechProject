@@ -48,9 +48,11 @@ public class DashboardActivity extends AppCompatActivity
 
 			}
 		}
-		if(requestCode == FindBankActivity.RESULT_SELECTED){
-			String bank = data.getStringExtra("bank_name");
-			Toast.makeText(DashboardActivity.this, bank, Toast.LENGTH_SHORT).show();
+		if(requestCode == FindBankActivity.REQUEST_SELECT){
+			if(resultCode == FindBankActivity.RESULT_SELECTED) {
+				String bank = data.getStringExtra("bank_name");
+				Toast.makeText(getApplicationContext(), "Your bank is " + bank, Toast.LENGTH_SHORT).show();
+			}
 		}
 	}
 	@Override
