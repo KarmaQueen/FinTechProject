@@ -102,7 +102,7 @@ public class DashboardActivity extends AppCompatActivity
 			Intent i = new Intent(this, FindBankActivity.class);
 			startActivityForResult(i, FindBankActivity.REQUEST_SELECT);
 		} else if (id == R.id.navdrawer_logout) {
-
+			finish();
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

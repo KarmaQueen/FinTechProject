@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class FindBankActivity extends AppCompatActivity {
 
@@ -23,16 +24,18 @@ public class FindBankActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_find_bank);
 
 		banksList = new ArrayList<>();
-		banksList.add(new BankBean("HSBC", R.drawable.ic_hsbc));
-		banksList.add(new BankBean("Societe Generale", R.drawable.ic_soge));
-		banksList.add(new BankBean("Bank of China HK", R.drawable.ic_bochk));
-		banksList.add(new BankBean("Citi Bank", R.drawable.ic_citi));
-		banksList.add(new BankBean("Deutsche Bank", R.drawable.ic_db));
-		banksList.add(new BankBean("DBS", R.drawable.ic_dbs));
-		banksList.add(new BankBean("ICBC", R.drawable.ic_icbc));
-		banksList.add(new BankBean("OCBC", R.drawable.ic_ocbc));
-		banksList.add(new BankBean("Bank of East Asia", R.drawable.ic_bea));
-		banksList.add(new BankBean("China Merchants Bank", R.drawable.ic_cmb));
+		banksList.add(new BankBean(s(R.string.hsbc), R.drawable.ic_hsbc));
+		banksList.add(new BankBean(s(R.string.soge), R.drawable.ic_soge));
+		banksList.add(new BankBean(s(R.string.bochk), R.drawable.ic_bochk));
+		banksList.add(new BankBean(s(R.string.citibank), R.drawable.ic_citi));
+		banksList.add(new BankBean(s(R.string.db), R.drawable.ic_db));
+		banksList.add(new BankBean(s(R.string.dbs), R.drawable.ic_dbs));
+		banksList.add(new BankBean(s(R.string.icbc), R.drawable.ic_icbc));
+		banksList.add(new BankBean(s(R.string.ocbc), R.drawable.ic_ocbc));
+		banksList.add(new BankBean(s(R.string.bea), R.drawable.ic_bea));
+		banksList.add(new BankBean(s(R.string.cmb), R.drawable.ic_cmb));
+
+		Collections.sort(banksList);
 
 		ListView lv = (ListView)findViewById(R.id.list_bank);
 		BankListAdapter customAdapter = new BankListAdapter(this, R.layout.item_bank, banksList);
@@ -49,6 +52,10 @@ public class FindBankActivity extends AppCompatActivity {
 			}
 		});
 
+	}
+
+	private String s(int id){
+		return getResources().getString(id);
 	}
 
 }

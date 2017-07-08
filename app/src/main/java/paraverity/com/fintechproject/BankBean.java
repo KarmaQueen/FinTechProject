@@ -1,10 +1,12 @@
 package paraverity.com.fintechproject;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by David on 08-Jul-17.
  */
 
-public class BankBean {
+public class BankBean implements Comparable<BankBean>{
 
 	private String name;
 	private int iconID;
@@ -24,4 +26,9 @@ public class BankBean {
 
 	public String getName(){ return name;}
 	public int getIconID(){ return iconID;}
+
+	@Override
+	public int compareTo(@NonNull BankBean o) {
+		return name.compareTo(o.getName());
+	}
 }

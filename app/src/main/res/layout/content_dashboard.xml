@@ -64,7 +64,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:src="@mipmap/person2"/>
+                            android:src="@mipmap/person5"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -76,7 +76,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Nicholas Chioy"
+                                android:text="Cici Jiang"
                                 android:textSize="22sp"/>
 
                             <TextView
@@ -291,6 +291,46 @@
                     </GridLayout>
 
 
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="100dp"
+                app:contentPadding="10dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/OpenNewAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:text="Open a new Bank Account"/>
+
+                    <Button
+                        android:id="@+id/PersonalLoan"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:text="Get a Loan"/>
+
+                    <Button
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:text="View Full Transaction History"/>
 
                 </LinearLayout>
 
