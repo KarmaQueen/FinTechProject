@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="paraverity.com.fintechproject.matchUpActivity"
+    tools:context="paraverity.com.fintechproject.MatchUpActivity"
     tools:showIn="@layout/activity_match_up">
 
     <Button

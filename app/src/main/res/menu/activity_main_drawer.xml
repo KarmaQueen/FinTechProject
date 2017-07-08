@@ -3,14 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/HSBC"
-            android:title="HSBC Premier"/>
+            android:id="@+id/navdrawer_citibank"
+            android:title="@string/citibank"/>
         <item
-            android:id="@+id/Citi"
-            android:title="Citibank Account"/>
+            android:id="@+id/navdrawer_hsbc"
+            android:title="@string/hsbc_premier"/>
         <item
-            android:id="@+id/OCBC"
-            android:title="OCBC Premier"/>
+            android:id="@+id/navdrawer_soge"
+            android:title="@string/soge"/>
     </group>
 
     <item android:title="Tools">
@@ -18,7 +18,7 @@
             <item
                 android:id="@+id/navdrawer_add_bank"
                 android:icon="@android:drawable/ic_menu_add"
-                android:title="Add Bank Account"/>
+                android:title="Add a Bank Account"/>
             <item
                 android:id="@+id/navdrawer_logout"
                 android:icon="@android:drawable/ic_menu_revert"

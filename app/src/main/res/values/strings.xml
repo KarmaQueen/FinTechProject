@@ -107,4 +107,7 @@
     <string name="title_activity_find_friend">FindFriendActivity</string>
     <string name="title_activity_input_bank_info">inputBankInfoActivity</string>
     <string name="title_activity_match_up">MatchUpActivity</string>
+    <string name="soge">Société Générale</string>
+    <string name="hsbc_premier">HSBC Premier</string>
+    <string name="citibank">Citibank</string>
 </resources>
