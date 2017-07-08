@@ -27,6 +27,12 @@ public class FindBankActivity extends AppCompatActivity {
 		banksList.add(new BankBean("Societe Generale", R.drawable.ic_soge));
 		banksList.add(new BankBean("Bank of China HK", R.drawable.ic_bochk));
 		banksList.add(new BankBean("Citi Bank", R.drawable.ic_citi));
+		banksList.add(new BankBean("Deutsche Bank", R.drawable.ic_db));
+		banksList.add(new BankBean("DBS", R.drawable.ic_dbs));
+		banksList.add(new BankBean("ICBC", R.drawable.ic_icbc));
+		banksList.add(new BankBean("OCBC", R.drawable.ic_ocbc));
+		banksList.add(new BankBean("Bank of East Asia", R.drawable.ic_bea));
+		banksList.add(new BankBean("China Merchants Bank", R.drawable.ic_cmb));
 
 		ListView lv = (ListView)findViewById(R.id.list_bank);
 		BankListAdapter customAdapter = new BankListAdapter(this, R.layout.item_bank, banksList);
