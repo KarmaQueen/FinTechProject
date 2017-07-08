@@ -6,6 +6,13 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_friend_list">FriendListActivity</string>
+
+    <string-array name="currencies">
+        <item>HKD</item>
+        <item>USD</item>
+        <item>RMB</item>
+    </string-array>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -98,4 +105,6 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_filter_contact_list">filterContactList</string>
     <string name="title_activity_find_friend">FindFriendActivity</string>
+    <string name="title_activity_input_bank_info">inputBankInfoActivity</string>
+    <string name="title_activity_match_up">MatchUpActivity</string>
 </resources>

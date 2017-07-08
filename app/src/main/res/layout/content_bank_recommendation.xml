@@ -21,7 +21,7 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="220dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp"
         android:id="@+id/tableLayout">
@@ -31,17 +31,20 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Bank 1"
+                android:layout_weight="1"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="Société Générale\nProperty Loan"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -50,17 +53,20 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Bank 2"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="HSBC Bank\nPersonal Instalment Loan"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -69,17 +75,20 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Bank 3"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="Citibank\nCitibank Speedy Cash"
                 android:textColor="#9f010c"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -105,5 +114,43 @@
         android:layout_marginTop="539dp"
         android:layout_marginEnd="35dp"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/noGuarantor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no. of potential guarantor"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="155dp"
+        app:layout_constraintLeft_toRightOf="@+id/checkBox1"
+        android:layout_marginLeft="14dp" />
+
+    <RadioButton
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="143dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <RadioButton
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+    <TextView
+        android:id="@+id/interestRate"
+        android:layout_width="145dp"
+        android:layout_height="19dp"
+        android:text="annual interest rate"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="184dp"
+        app:layout_constraintLeft_toRightOf="@+id/checkBox2"
+        android:layout_marginLeft="14dp" />
 
 </android.support.constraint.ConstraintLayout>
