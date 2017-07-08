@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="According to our calculation, we found the best three plan for you."
         android:textSize="36sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -21,7 +22,7 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="270dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp"
         android:id="@+id/tableLayout">
@@ -115,42 +116,40 @@
         android:layout_marginEnd="35dp"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <TextView
-        android:id="@+id/noGuarantor"
+    <RadioGroup
+        android:id="@+id/filterLoan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="no. of potential guarantor"
-        android:textSize="17sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="155dp"
-        app:layout_constraintLeft_toRightOf="@+id/checkBox1"
-        android:layout_marginLeft="14dp" />
+        android:layout_height="wrap_content">
 
-    <RadioButton
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="143dp"
-        tools:layout_editor_absoluteX="8dp" />
+        <RadioButton
+            android:id="@+id/noOfGuarantor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="143dp"
+            android:text="no. of potential guarantor"
+            android:textSize="20sp" />
 
-    <RadioButton
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+        <RadioButton
+            android:id="@+id/interestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/noOfGuarantor"
+            android:checked="true"
+            android:text="yearly interest rate"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/interestRate"
-        android:layout_width="145dp"
-        android:layout_height="19dp"
-        android:text="annual interest rate"
-        android:textSize="17sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="184dp"
-        app:layout_constraintLeft_toRightOf="@+id/checkBox2"
-        android:layout_marginLeft="14dp" />
+        <Button
+            android:id="@+id/sortBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Sort" />
+
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
