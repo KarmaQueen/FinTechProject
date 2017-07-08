@@ -8,6 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="paraverity.com.fintechproject.DashboardActivity"
     tools:showIn="@layout/app_bar_main">
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -16,13 +17,19 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+        <!--tools:layout_editor_absoluteX="32dp"-->
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="98dp"/>
+
     <LinearLayout
         android:id="@+id/relativeLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,23 +39,21 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        tools:layout_constraintTop_creator="1">
 
 
         <!--<TextView-->
-            <!--android:id="@+id/textView2"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Matching Process"-->
-            <!--android:layout_marginTop="320dp"-->
-            <!--android:textColor="@android:color/black"-->
-            <!--android:textSize="18sp"-->
-            <!--android:textStyle="bold" />-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Matching Process"-->
+        <!--android:layout_marginTop="320dp"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textStyle="bold" />-->
 
         <Button
-            android:id="@+id/Withdrawal"
+            android:id="@+id/OpenNewAccount"
             android:layout_width="wrap_content"
             android:layout_height="51dp"
             android:layout_marginTop="320dp"
@@ -56,21 +61,21 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/PersonalLoan"
             android:layout_width="205dp"
             android:layout_height="48dp"
             android:layout_marginTop="4dp"
             android:text="Personal Loan" />
 
         <!--<android.support.design.widget.FloatingActionButton-->
-            <!--android:id="@+id/FriendList"-->
-            <!--android:layout_width="49dp"-->
-            <!--android:layout_height="49dp"-->
-            <!--android:clickable="true"-->
-            <!--android:onClick="moreInfo"-->
-            <!--app:backgroundTint="@android:color/holo_blue_light"-->
-            <!--app:fabSize="mini"-->
-            <!--app:srcCompat="@android:drawable/star_big_on" />-->
+        <!--android:id="@+id/FriendList"-->
+        <!--android:layout_width="49dp"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="moreInfo"-->
+        <!--app:backgroundTint="@android:color/holo_blue_light"-->
+        <!--app:fabSize="mini"-->
+        <!--app:srcCompat="@android:drawable/star_big_on" />-->
 
 
         <Button
