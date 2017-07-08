@@ -43,6 +43,13 @@
             android:label="@string/title_activity_find_friend"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".InputBankInfoActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".BankRecommendationActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

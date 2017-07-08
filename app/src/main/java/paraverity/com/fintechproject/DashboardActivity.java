@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class DashboardActivity extends AppCompatActivity
@@ -33,6 +34,15 @@ public class DashboardActivity extends AppCompatActivity
 		//nagivationview
 		NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
+
+		Button openBankAccount = (Button)findViewById(R.id.PersonalLoan);
+		openBankAccount.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), InputBankInfoActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 	public void checkHistory (View view){
 		startActivity(new Intent(this, CheckHistoryActivity.class));
@@ -113,7 +123,6 @@ public class DashboardActivity extends AppCompatActivity
 	}
 
 	public void startOpenBankAccount(View view){
-		Intent i = new Intent(this, InputBankInfoActivity.class);
-		startActivity(i);
+
 	}
 }

@@ -19,68 +19,77 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
         <TextView
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="I have a bank in mind"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Bank"/>
+            android:text="Please Input your basic loan details:"
+            android:textSize="24sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Currency"/>
+
             <Spinner
                 android:id="@+id/inputbankinfo_spinner"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/currencies"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="14sp"
                 android:text="Amount"/>
             <EditText
                 android:id="@+id/inputbankinfo_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="14sp"
                 android:text="Months"/>
             <EditText
                 android:id="@+id/inputbankinfo_months"
-                android:layout_width="52dp"
-                android:layout_height="33dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"/>
+                android:inputType="number"/>
         </LinearLayout>
 
         <Button
+            android:layout_marginTop="32dp"
             android:id="@+id/inputbankinfo_confirm"
             android:onClick="confirmInfo"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="confirm"/>

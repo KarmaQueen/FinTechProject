@@ -8,148 +8,60 @@
     tools:context="paraverity.com.fintechproject.BankRecommendationActivity"
     tools:showIn="@layout/activity_bank_recommendation">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="According to our calculation, we found the best three plan for you."
-        android:textSize="36sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TableLayout
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="270dp"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp"
-        android:id="@+id/tableLayout">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bank 1"
-                android:layout_weight="1"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="Société Générale\nProperty Loan"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bank 2"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="HSBC Bank\nPersonal Instalment Loan"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bank 3"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="Citibank\nCitibank Speedy Cash"
-                android:textColor="#9f010c"
-                android:textSize="20sp" />
-
-        </TableRow>
-
-    </TableLayout>
-
-    <Button
-        android:id="@+id/backToFront"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="back to front"
-        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="539dp"
-        android:layout_marginStart="16dp" />
-    <Button
-        android:id="@+id/filterFriend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="filter friend"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="539dp"
-        android:layout_marginEnd="35dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
-    <RadioGroup
-        android:id="@+id/filterLoan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/noOfGuarantor"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="143dp"
-            android:text="no. of potential guarantor"
-            android:textSize="20sp" />
+            android:text="Here are the best loans we found for you."/>
 
-        <RadioButton
-            android:id="@+id/interestRate"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/noOfGuarantor"
-            android:checked="true"
-            android:text="yearly interest rate"
-            android:textSize="20sp"/>
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Lowest APR (Annual Percentage Rate)"/>
 
-        <Button
-            android:id="@+id/sortBtn"
+
+        <ListView
+            android:id="@+id/listView_apr"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/item_apr_bank"
+            android:scrollbars="none"
+            android:layout_height="180dp"/>
+
+        <TextView
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Sort" />
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Most Potential Guarantors"/>
 
-    </RadioGroup>
+        <ListView
+            android:id="@+id/listView_most"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/item_nums_bank"
+            android:scrollbars="none"
+            android:layout_height="180dp"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

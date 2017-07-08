@@ -1,18 +1,45 @@
 package paraverity.com.fintechproject;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by David on 08-Jul-17.
  * JavaBean that contains loan info
  */
 
-public class LoanInfoBean {
+public class LoanInfoBean implements Comparable<LoanInfoBean>{
 
-	private float cashRebate; //e.g. HK$ 800, possible
-	private float absoluteLoanAmt; //e.g. Maximum of 3 Million HKD (then the value = 3,000,000)
-	private int salaryMultLoanAmt; //e.g. 12 x Monthly Salary (then the value = 12)
-	private int repaymentTenor; //e.g. 60 months (then value = 60)
-	private float interestRate; //idk lol ask cici
+	private String bank;
+	private int minimumAmt;
+	private int maximumAmt;
+	private int minimumPeriod;
+	private int maximumPeriod;
+	private double APR;
 
+	public boolean isValid(int amt, int period){
+		return minimumAmt <= amt &&  amt <= maximumAmt &&
+				minimumPeriod <= period && period <= maximumPeriod;
+	}
 
+	public LoanInfoBean(String bank, int mia, int maa, int mip, int map, double aprr){
+		this.bank = bank;
+		minimumAmt = mia;
+		maximumAmt = maa;
+		minimumPeriod = mip;
+		maximumPeriod = map;
+		APR = aprr;
+	}
 
+	@Override
+	public int compareTo(@NonNull LoanInfoBean o) {
+		return Double.compare(APR, o.APR);
+	}
+
+	public double getAPR(){
+		return APR;
+	}
+
+	public String getBank(){
+		return bank;
+	}
 }
