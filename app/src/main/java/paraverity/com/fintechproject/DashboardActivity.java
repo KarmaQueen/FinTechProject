@@ -11,7 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.ViewManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class DashboardActivity extends AppCompatActivity
@@ -41,6 +44,44 @@ public class DashboardActivity extends AppCompatActivity
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), InputBankInfoActivity.class);
 				startActivity(intent);
+			}
+		});
+
+		ImageView accept1 = (ImageView)findViewById(R.id.dashboard_accept1);
+		ImageView accept2 = (ImageView)findViewById(R.id.dashboard_accept2);
+		ImageView cancel1 = (ImageView)findViewById(R.id.dashboard_cancel1);
+		ImageView cancel2 = (ImageView)findViewById(R.id.dashboard_cancel2);
+
+		accept1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewGroup parent = (ViewGroup) findViewById(R.id.linearCici).getParent();
+				parent.removeView(findViewById(R.id.linearCici));
+				Toast.makeText(DashboardActivity.this, "Cici's Request has been accepted!", Toast.LENGTH_LONG).show();
+			}
+		});
+		cancel1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewGroup parent = (ViewGroup) findViewById(R.id.linearCici).getParent();
+				parent.removeView(findViewById(R.id.linearCici));
+				Toast.makeText(DashboardActivity.this, "Cici's Request has been rejected!", Toast.LENGTH_LONG).show();
+			}
+		});
+		accept2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewGroup parent = (ViewGroup) findViewById(R.id.linearGuillaume).getParent();
+				parent.removeView(findViewById(R.id.linearGuillaume));
+				Toast.makeText(DashboardActivity.this, "Guillaume's Request has been accepted!", Toast.LENGTH_LONG).show();
+			}
+		});
+		cancel2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewGroup parent = (ViewGroup) findViewById(R.id.linearGuillaume).getParent();
+				parent.removeView(findViewById(R.id.linearGuillaume));
+				Toast.makeText(DashboardActivity.this, "Guillaume's Request has been rejected!", Toast.LENGTH_LONG).show();
 			}
 		});
 	}
