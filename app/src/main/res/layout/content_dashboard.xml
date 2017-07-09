@@ -22,7 +22,7 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
-
+    
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,9 +49,9 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:padding="8dp"
-                        android:textStyle="bold"
                         android:text="Pending your Approval"
                         android:textSize="24sp"
+                        android:textStyle="bold"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp"/>
 
@@ -83,7 +83,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
-                                android:text="HKD 3,000"
+                                android:text="Personal Loan: HKD 3,000, HSBC"
                                 android:textSize="12sp"/>
                         </LinearLayout>
 
@@ -129,7 +129,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
-                                android:text="HKD 3,500"
+                                android:text="Personal Loan: USD 35,000, SoGe"
                                 android:textSize="12sp"/>
                         </LinearLayout>
 
@@ -173,9 +173,9 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:padding="8dp"
-                        android:textStyle="bold"
                         android:text="Recent History"
                         android:textSize="24sp"
+                        android:textStyle="bold"
                         tools:layout_editor_absoluteX="0dp"
                         tools:layout_editor_absoluteY="0dp"/>
 
@@ -188,7 +188,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ignavier Ng"/>
+                            android:text="HKD 30,000, Citi"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -198,7 +198,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Lnt HKD 50,000"/>
+                            android:text="Pending"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -214,7 +214,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Jason Liu"/>
+                            android:text="CNY 25,000, BOCHK"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -224,7 +224,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Brw HKD 5,000"/>
+                            android:text="No Match Found"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -240,7 +240,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="David Lee"/>
+                            android:text="USD 15,000, SoGe"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -250,7 +250,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Brw HKD 300,000"/>
+                            android:text="Matched, Brian"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -266,7 +266,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ke Yi Tan"/>
+                            android:text="HKD 10,000, HSBC"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -276,7 +276,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Lnt HKD 200"/>
+                            android:text="Approved Cici"/>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -289,7 +289,6 @@
                             android:text="2017-04-13 10:23:24"/>
 
                     </GridLayout>
-
 
 
                 </LinearLayout>
@@ -312,27 +311,27 @@
 
                     <Button
                         android:id="@+id/openNewAccountButton"
-                        android:enabled="false"
-                        android:onClick="startOpenBankAccount"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:enabled="false"
+                        android:onClick="startOpenBankAccount"
                         android:text="Open a new Bank Account"/>
 
                     <Button
                         android:id="@+id/PersonalLoan"
-                        android:layout_marginTop="16dp"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_marginTop="16dp"
                         android:text="Get a Loan"/>
 
                     <Button
-                        android:onClick="checkHistory"
-                        android:layout_marginTop="16dp"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_marginTop="16dp"
+                        android:onClick="checkHistory"
                         android:text="View Full Transaction History"/>
 
                 </LinearLayout>

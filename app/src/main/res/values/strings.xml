@@ -10,7 +10,7 @@
     <string-array name="currencies">
         <item>HKD</item>
         <item>USD</item>
-        <item>RMB</item>
+        <item>CNY</item>
     </string-array>
 
     <string name="large_text">
@@ -104,7 +104,7 @@
     </string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_filter_contact_list">filterContactList</string>
-    <string name="title_activity_find_friend">FindFriendActivity</string>
+    <string name="title_activity_find_friend">Send a Request</string>
     <string name="title_activity_input_bank_info">inputBankInfoActivity</string>
     <string name="title_activity_match_up">MatchUpActivity</string>
     <string name="soge">Société Générale</string>
